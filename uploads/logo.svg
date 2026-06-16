@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" role="img" aria-label="Glow Aesthetics Med Spa">
+  <title>Glow Aesthetics</title>
+
+  <!-- Circle mark -->
+  <circle cx="30" cy="30" r="27" stroke="#7B9B8F" stroke-width="0.9" fill="none"/>
+
+  <!-- Leaf outline -->
+  <path d="M30 10C25 15 20 21 20 27C20 33.627 24.477 39 30 39C35.523 39 40 33.627 40 27C40 21 35 15 30 10Z"
+        stroke="#7B9B8F" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
+
+  <!-- Center vein -->
+  <line x1="30" y1="10" x2="30" y2="39" stroke="#7B9B8F" stroke-width="0.8" stroke-linecap="round"/>
+
+  <!-- Left branch vein -->
+  <path d="M23 25C25.5 27.5 27.5 29 30 31" stroke="#7B9B8F" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+
+  <!-- Right branch vein -->
+  <path d="M37 21C34.5 23.5 32.5 26 30 28" stroke="#7B9B8F" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+
+  <!-- Divider -->
+  <line x1="68" y1="12" x2="68" y2="48" stroke="#E8E4DF" stroke-width="1"/>
+
+  <!-- GLOW wordmark -->
+  <text x="82" y="34"
+        font-family="'Playfair Display', Georgia, serif"
+        font-size="26"
+        font-weight="600"
+        letter-spacing="2"
+        fill="#2C2A28">GLOW</text>
+
+  <!-- Aesthetics italic -->
+  <text x="152" y="34"
+        font-family="'Playfair Display', Georgia, serif"
+        font-size="22"
+        font-weight="400"
+        font-style="italic"
+        fill="#7B9B8F">Aesthetics</text>
+
+  <!-- Tagline -->
+  <text x="82" y="48"
+        font-family="'Inter', system-ui, sans-serif"
+        font-size="8"
+        font-weight="600"
+        letter-spacing="2.5"
+        fill="#9B8B7E">MED SPA · OKLAHOMA CITY</text>
+</svg>
