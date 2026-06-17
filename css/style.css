@@ -111,61 +111,10 @@ h3 { font-size: clamp(19px, 3vw, 24px); font-weight: 500; }
 .btn-white:hover { background: var(--bg-alt); box-shadow: var(--shadow-sm); }
 .btn-sm { height: 36px; padding: 0 var(--space-lg); font-size: 13px; }
 
-/* ---- Jiggle ---- */
-@keyframes jiggle {
-  0%   { transform: rotate(0deg) translateY(0); }
-  15%  { transform: rotate(-3deg) translateY(-2px); }
-  30%  { transform: rotate(3deg) translateY(-3px); }
-  45%  { transform: rotate(-2deg) translateY(-1px); }
-  60%  { transform: rotate(2deg) translateY(-2px); }
-  75%  { transform: rotate(-1deg) translateY(-1px); }
-  100% { transform: rotate(0deg) translateY(0); }
-}
-.btn:hover { animation: jiggle 400ms var(--ease) forwards; }
-@media (prefers-reduced-motion: reduce) { .btn:hover { animation: none; } }
-
-/* ---- Sparkles ---- */
-.sparkle {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  opacity: 0;
-  animation: sparkle-float 1000ms ease-out forwards;
-}
-@keyframes sparkle-float {
-  0%   { opacity: 0; transform: translate(0,0) scale(0.4); }
-  20%  { opacity: 1; transform: translate(var(--sx), var(--sy1)) scale(1); }
-  100% { opacity: 0; transform: translate(var(--sx), var(--sy2)) scale(0.3); }
-}
-.sparkle-star {
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  font-size: 12px;
-  line-height: 1;
-  animation: sparkle-star-float 1200ms ease-out forwards;
-}
-@keyframes sparkle-star-float {
-  0%   { opacity: 0; transform: translate(0,0) scale(0.5) rotate(0deg); }
-  25%  { opacity: 1; transform: translate(var(--sx), var(--sy1)) scale(1.1) rotate(20deg); }
-  100% { opacity: 0; transform: translate(var(--sx), var(--sy2)) scale(0.4) rotate(45deg); }
-}
-/* Ambient sparkles fixed on page */
-.ambient-sparkle {
-  position: fixed;
-  pointer-events: none;
-  z-index: 50;
-  border-radius: 50%;
-  animation: ambient-pulse var(--dur, 3s) ease-in-out infinite var(--delay, 0s);
-}
-@keyframes ambient-pulse {
-  0%, 100% { opacity: 0; transform: scale(0.5); }
-  50%       { opacity: var(--max-opacity, 0.5); transform: scale(1); }
-}
+/* ---- Button hover: subtle lift ---- */
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+@media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; box-shadow: none; } }
 
 /* ============================================================
    SCROLL REVEAL
@@ -549,18 +498,6 @@ h3 { font-size: clamp(19px, 3vw, 24px); font-weight: 500; }
   .reveal { transform: none; transition: opacity 400ms ease; }
 }
 
-/* ---- Gold Dust Cursor ---- */
-.gold-dust {
-  position: fixed;
-  pointer-events: none;
-  z-index: 99999;
-  border-radius: 50%;
-  animation: gold-fade var(--gd-dur, 700ms) ease-out forwards;
-}
-@keyframes gold-fade {
-  0%   { opacity: 0.9; transform: translate(0,0) scale(1); }
-  100% { opacity: 0;   transform: translate(var(--gd-x,0px), var(--gd-y,-20px)) scale(0); }
-}
 
 /* ============================================================
    TEAM
